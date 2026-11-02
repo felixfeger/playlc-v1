@@ -4,8 +4,8 @@
 //           To use one, upload the image to the repo root and put its filename, e.g. "route-nov-2026.png".
 window.PLAYLC_EVENTS = [
   {
-    id: "downtown-nov-2026",
-    name: "PlayLC Downtown Lego City",
+    id: "santamooica-nov-2026",
+    name: "PlayLC Downtown Santa Mooica",
     tagline: "Streets open to people. Cars take the weekend off.",
     startDate: "2026-11-14",
     endDate: "2026-11-15",
@@ -14,7 +14,7 @@ window.PLAYLC_EVENTS = [
     routeMap: "",
     registerUrl: "",
     activities: [
-      { date: "2026-11-14", title: "PlayLC 5K & 10K", description: "Timed races through Downtown Lego City's open streets.", free: false, time: "" },
+      { date: "2026-11-14", title: "PlayLC 5K & 10K", description: "Timed races through Downtown Santa Mooica's open streets.", free: false, time: "" },
       { date: "2026-11-15", title: "PlayLC Walk, Run, Roll", description: "Walk, run, bike, skate or roll the route at your own pace. Free for everyone.", free: true, time: "" }
     ]
   }
