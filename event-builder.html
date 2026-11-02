@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>Event builder | PlayLC</title><link rel="icon" href="mark.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"></head>
+<body><main><section><div class="wrap" style="max-width:720px">
+<h1>Event builder</h1>
+<p class="lead">Fill this in, copy the result, and paste it into the list in events.js.</p>
+<div class="card">
+<label>Event name</label><input id="name" value="PlayLC ">
+<label>Tagline</label><input id="tag">
+<label>Location</label><input id="loc">
+<label>First day</label><input id="s" type="date">
+<label>Last day</label><input id="e" type="date">
+<label>Description</label><textarea id="desc" rows="3"></textarea>
+<label>Route map filename (leave blank for none)</label><input id="map" placeholder="route-nov-2026.png">
+<label>Register link (optional)</label><input id="reg" placeholder="https://">
+<h3 style="margin-top:20px">Activities</h3><div id="acts"></div>
+<button class="btn ghost" id="add" type="button">Add activity</button>
+</div>
+<div class="row" style="margin:16px 0"><button class="btn" id="go" type="button">Build event</button><button class="btn alt" id="copy" type="button">Copy</button></div>
+<pre id="out">Your event code appears here.</pre>
+</div></section></main>
+<script>
+var $=function(i){return document.getElementById(i)};
+function addAct(){var d=document.createElement("div");d.className="act";
+d.innerHTML='<label>Date</label><input type="date" class="d"><label>Title</label><input class="t"><label>Time (optional)</label><input class="tm" placeholder="7:00 AM"><label>Description</label><input class="ds"><label><input type="checkbox" class="fr" style="width:auto"> Free</label><button type="button" class="btn ghost" onclick="this.parentNode.remove()">Remove</button>';
+$("acts").appendChild(d)}
+$("add").onclick=addAct;addAct();
+function slug(s){return s.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")}
+$("go").onclick=function(){
+var acts=[].map.call(document.querySelectorAll(".act"),function(a){return{date:a.querySelector(".d").value,title:a.querySelector(".t").value,description:a.querySelector(".ds").value,free:a.querySelector(".fr").checked,time:a.querySelector(".tm").value}}).filter(function(a){return a.title});
+var ev={id:slug($("name").value)+"-"+($("s").value||"").slice(0,7),name:$("name").value,tagline:$("tag").value,startDate:$("s").value,endDate:$("e").value||$("s").value,location:$("loc").value,description:$("desc").value,routeMap:$("map").value.trim(),registerUrl:$("reg").value.trim(),activities:acts};
+$("out").textContent=JSON.stringify(ev,null,2)+","};
+$("copy").onclick=function(){navigator.clipboard.writeText($("out").textContent);this.textContent="Copied";var b=this;setTimeout(function(){b.textContent="Copy"},1500)};
+</script></body></html>
