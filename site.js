@@ -25,8 +25,10 @@ function card(e){var a=D(e.startDate);return'<article class="card ev"><div class
 function $(i){return document.getElementById(i)}
 // header + footer
 function chrome(){var pg=document.body.dataset.page,n=[["index.html","Home","home"],["events.html","Events","events"],["faq.html","FAQ","faq"],[CONTACT,"Contact",""]];
- $("site-header").outerHTML='<header class="top"><div class="wrap"><a class="logo" href="index.html" aria-label="PlayLC home"><img src="logo.svg" alt="PlayLC"></a><button id="menu" aria-label="Menu">\u2630</button><nav><ul id="nav">'+n.map(function(x){return'<li><a href="'+x[0]+'"'+(x[2]===pg?' class="on"':"")+">"+x[1]+"</a></li>"}).join("")+"</ul></nav></div></header>";
- $("menu").onclick=function(){$("nav").classList.toggle("open")};
+ $("site-header").outerHTML='<header class="top"><div class="wrap"><a class="logo" href="index.html" aria-label="PlayLC home"><img src="logo.svg" alt="PlayLC"></a><button id="menu" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button><nav aria-label="Main"><ul id="nav">'+n.map(function(x){return'<li><a href="'+x[0]+'"'+(x[2]===pg?' class="on"':"")+">"+x[1]+"</a></li>"}).join("")+"</ul></nav></div></header>";
+ var mb=$("menu"),nv=$("nav");function tog(o){nv.classList.toggle("open",o);document.body.classList.toggle("lock",o);mb.setAttribute("aria-expanded",o);mb.setAttribute("aria-label",o?"Close menu":"Open menu")}
+ mb.onclick=function(){tog(!nv.classList.contains("open"))};nv.onclick=function(e){if(e.target.tagName==="A")tog(false)};
+ document.addEventListener("keydown",function(e){if(e.key==="Escape")tog(false)});window.addEventListener("resize",function(){if(innerWidth>760)tog(false)});
  $("site-footer").outerHTML='<footer><div class="wrap"><div><img src="logo.svg" alt="PlayLC" style="filter:brightness(0) invert(1)"><p>Streets open to people.</p></div><div><p>Open Streets made possible by</p><a href="https://citymetro.xyz"><img src="'+CM_LOGO+'" alt="City Metro" style="background:#fff;padding:4px 8px;border-radius:10px"></a></div><ul><li><a href="events.html">Events</a></li><li><a href="faq.html">FAQ</a></li><li><a href="'+CONTACT+'">Contact</a></li></ul></div><div class="wrap" style="margin-top:14px"><small>\u00a9 '+new Date().getFullYear()+" Play Lego City</small></div></footer>"}
 function faqHTML(n){return FAQS.slice(0,n||FAQS.length).map(function(q){return"<details><summary>"+q[0]+"</summary><p>"+q[1]+"</p></details>"}).join("")}
 // route map: hides itself if no map is set or the image is missing
