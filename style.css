@@ -35,8 +35,8 @@ nav li:last-child a:not(.on){background:var(--sun)}
 @media(max-width:860px){.hero .wrap{grid-template-columns:1fr}}
 .hero h1 em{font-style:normal;color:var(--blue)}
 .art{position:relative}.art>img{width:100%;border-radius:28px;box-shadow:var(--sh)}
-.art #hero-event{position:absolute;left:14px;right:14px;bottom:-26px}
-@media(max-width:860px){.art #hero-event{position:static;margin-top:14px}}
+.art #hero-event{margin-top:16px}
+
 .road{background:var(--navy);color:#fff;border-radius:20px;padding:18px 20px 24px;position:relative;overflow:hidden;box-shadow:var(--sh)}
 .road:after{content:"";position:absolute;left:0;right:0;bottom:9px;height:4px;background:repeating-linear-gradient(90deg,var(--sun) 0 22px,transparent 22px 38px)}
 .road h3{font-size:1.3rem;margin:6px 0 2px}.road p{color:#c5d6ee;margin-bottom:12px}.road .btn{padding:10px 20px}
