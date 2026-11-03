@@ -9,8 +9,8 @@ window.PLAYLC_EVENTS = [
     tagline: "Streets open to people. Cars take the weekend off.",
     startDate: "2026-11-14",
     endDate: "2026-11-15",
-    location: "Downtown Lego City",
-    description: "Two days of car-free streets in Downtown Lego City. Race the 5K or 10K on Saturday, then join the free PlayLC Walk, Run, Roll on Sunday.",
+    location: "Downtown Santa Mooica",
+    description: "Two days of car-free streets in Downtown Santa Mooica. Race the 5K or 10K on Saturday, then join the free PlayLC Walk, Run, Roll on Sunday.",
     routeMap: "",
     registerUrl: "",
     activities: [
