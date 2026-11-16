@@ -38,14 +38,14 @@ window.PLAYLC_EVENTS = [
     activities: [
       {
         date: "2027-05-13",
-        title: "Lego City County Grand Tour Opening Ceremony,
+        title: "Lego City County Grand Tour Opening Ceremony",
         description: "Opening day ceremony for the second annual LC Grand Tour!",
         free: true,
         time: "6:00-7:00"
       },
-       {
+      {
         date: "2027-05-13",
-        title: "Meet and Greet with the Artists,
+        title: "Meet and Greet with the Artists",
         description: "Special limited meet and great to meet the wonderful artists that make the Lego City Museum of Art such a wonderful place.",
         free: false,
         time: "7:00-7:35"
@@ -80,11 +80,11 @@ window.PLAYLC_EVENTS = [
       },
       {
         date: "2027-05-16",
-        title: "Lego City County Grand Tour Closing Ceremony,
+        title: "Lego City County Grand Tour Closing Ceremony",
         description: "Closing ceremony for the second annual LC Grand Tour!",
         free: false,
         time: "18:00-19:00"
-      },
+      }
     ]
   }
 ];
