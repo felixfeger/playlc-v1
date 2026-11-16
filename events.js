@@ -32,7 +32,7 @@ window.PLAYLC_EVENTS = [
     startDate: "2027-05-13",
     endDate: "2027-05-16",
     location: "Downtown lego City",
-    description: "Three days of car-free streets in the Heart of Lego City. Race,Walk, Run, Roll in Downtown Lego City and watch the amazing parade every day at 12:00 PM",
+    description: "Four days of car-free streets in the Heart of Lego City. Walk, Run, Roll in Downtown Lego City and watch the amazing parade every day at 12:00 PM",
     routeMap: "",
     registerUrl: "",
     activities: [
