@@ -4,18 +4,17 @@
 //           To use one, upload the image to the repo root and put its filename, e.g. "route-nov-2026.png".
 window.PLAYLC_EVENTS = [
   {
-    id: "santamooica-nov-2026",
-    name: "PlayLC Downtown Santa Mooica",
+    id: "legocity-feb-2027",
+    name: "PlayLC Heart of Lego City",
     tagline: "Streets open to people. Cars take the weekend off.",
-    startDate: "2026-11-14",
-    endDate: "2026-11-15",
-    location: "Downtown Santa Mooica",
-    description: "Two days of car-free streets in Downtown Santa Mooica. Race the 5K or 10K on Saturday, then join the free PlayLC Walk, Run, Roll on Sunday.",
+    startDate: "2027-02-14",
+    endDate: "2027-02-14",
+    location: "Heart of Downtown lego City",
+    description: "One day of car-free streets in the Heart of Lego City. Race,Walk, Run, Roll on Sunday from Union Station to Downtown Lego City.",
     routeMap: "",
     registerUrl: "",
     activities: [
-      { date: "2026-11-14", title: "PlayLC 5K & 10K", description: "Timed races through Downtown Santa Mooica's open streets.", free: false, time: "" },
-      { date: "2026-11-15", title: "PlayLC Walk, Run, Roll", description: "Walk, run, bike, skate or roll the route at your own pace. Free for everyone.", free: true, time: "" }
+      { date: "2027-02-14", title: "PlayLC Race, Walk, Run, Roll", description: "Walk, run, bike, skate or roll the route at your own pace. Free for everyone.", free: true, time: "6:00" }
     ]
   }
 ];
