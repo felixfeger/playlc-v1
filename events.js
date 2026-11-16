@@ -26,8 +26,8 @@ window.PLAYLC_EVENTS = [
     ]
   },
   {
-    id: "showcase-may-2027",
-    name: "PlayLC Heart of Lego City",
+    id: "tour-may-2027",
+    name: "Lego City County Grand Tour",
     tagline: "Streets open to people. Cars take the weekend off.",
     startDate: "2027-05-13",
     endDate: "2027-05-16",
