@@ -83,7 +83,7 @@ window.PLAYLC_EVENTS = [
         title: "Lego City County Grand Tour Closing Ceremony,
         description: "Closing ceremony for the second annual LC Grand Tour!",
         free: false,
-        time: "6:00-7:00"
+        time: "18:00-19:00"
       },
     ]
   }
